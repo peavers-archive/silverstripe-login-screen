@@ -1,0 +1,142 @@
+// scss-lint:disable all
+@function parse-int($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin safe-rem($property, $values) {
+  $rem-base: 16;
+  $px: ();
+  $rem: ();
+
+  @each $value in $values {
+    @if $value == 0 or $value == auto {
+      $px: append($px, $value);
+      $rem: append($rem, $value);
+    } @else {
+      $unit: unit($value);
+      $val: parse-int($value);
+      $px: append($px, $value + px);
+      $rem: append($rem, ($val / $rem-base + rem));
+    }
+  }
+
+  @if $px == $rem {
+    #{$property}: $px;
+  } @else {
+    #{$property}: $px;
+    #{$property}: $rem;
+  }
+}
+
+// Font imports
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), url('#{$file-path}.svg##{$font-family}') format('svg'), url('#{$file-path}.woff') format('woff'), url('#{$file-path}.ttf') format('truetype');
+  }
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+//Border
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius + px;
+  border-radius: $radius + px;
+  background-clip: padding-box;
+}
+
+@mixin animate-slide() {
+  -webkit-animation-name: slide;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: .25s;
+  -webkit-animation-duration: 1.25s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+}
+
+@mixin animate-drop() {
+  position: relative;
+  opacity: 0;
+  -webkit-animation-name: drop;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+}
+
+@mixin animate-screen() {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  opacity: 0;
+  -webkit-animation-name: screen;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+}
+
+@mixin delay($time) {
+  -webkit-animation-delay: $time;
+}
+
+@mixin circle($radius) {
+  @include safe-rem(width, $radius);
+  @include safe-rem(height, $radius);
+  @include border-radius($radius/2);
+}
+
+// generic transform
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+// rotate
+@mixin rotate ($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+// translate
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+// skew
+@mixin skew ($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin ($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin gradient($color1, $color2) {
+  background-image: -webkit-linear-gradient(top, $color1, $color2);
+  background-image: -moz-linear-gradient(top, $color1, $color2);
+  background-image: -ms-linear-gradient(top, $color1, $color2);
+  background-image: -o-linear-gradient(top, $color1, $color2);
+  background-image: linear-gradient(top, $color1, $color2);
+}
+
+
+// scss-lint:enable all

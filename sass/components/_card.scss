@@ -1,0 +1,21 @@
+@import 'base';
+
+.card {
+  @include animate-screen();
+  @include border-radius(2);
+  @include safe-rem(margin, 50 auto);
+  @include safe-rem(padding, 40);
+  @include safe-rem(width, 355);
+  background-color: $grey-500;
+  font-family: arial, serif;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .3);
+
+  img {
+    @include safe-rem(margin, 0 0 40 0);
+    @include safe-rem(height, 97);
+    @include animate-drop();
+    @include delay(.5s);
+    display: block;
+    width: 100%;
+  }
+}

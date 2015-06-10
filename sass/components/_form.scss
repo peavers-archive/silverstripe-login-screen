@@ -1,0 +1,61 @@
+@import 'base';
+
+form {
+
+  label {
+    display: none;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  input[type=submit] {
+    @include gradient($blue-400, $blue-500);
+    @include transition(all .2 ease-in-out);
+    @include border-radius(3);
+    @include safe-rem(margin, 16 0);
+    @include safe-rem(font-size, 14);
+    @include safe-rem(height, 36);
+    @include safe-rem(padding, 0 8);
+    @include safe-rem(line-height, 36);
+    display: block;
+    width: 100%;
+    border: 1px solid $blue-500;
+    color: $white;
+    background-color: $blue-300;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 1px rgba(0, 0, 0, .1);
+    cursor: default;
+
+    &:hover {
+      @include gradient($blue-400, $blue-500);
+      border: 1px solid $blue-700;
+      color: $white;
+      background-color: $blue-600;
+      text-shadow: 0 1px rgba(0, 0, 0, .3);
+    }
+  }
+
+  input[type=email],
+  input[type=text],
+  input[type=password] {
+    @include safe-rem(height, 44);
+    @include safe-rem(margin-top, 16);
+    @include safe-rem(font-size, 16);
+    @include safe-rem(padding, 0 8);
+    @include border-radius(1);
+
+    display: inline-block;
+    width: 100%;
+    border: 1px solid $grey-300;
+    color: $grey-800;
+    background: $white;
+
+    &:hover {
+      border: 1px solid $grey-400;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    }
+  }
+}

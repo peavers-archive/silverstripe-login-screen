@@ -1,0 +1,253 @@
+@import 'base';
+
+// Set base font size
+$rem-base: 16px !default;
+// Set line height ratio base
+$line-height-base: 26px !default;
+// Vertical rhythm ratio
+$type-rhythm-ratio: 1.14 !default;
+// Desktop Media Query
+$desktop: '(min-width: 1024px)' !default;
+// Tablet Media Query
+$tablet: '(min-width: 768px) and (max-width: 1023px)' !default;
+// Mobile Media Query
+$mobile: '(max-width: 767px)' !default;
+// Set Grid Column Count
+$grid-columns: 12 !default;
+// Set Grid Gutter (as px)
+$grid-gutter: 20px !default;
+// Set Grid Padding (as px)
+$grid-padding: 20px !default;
+// Set Grid Max Width (as px)
+$grid-max-width: 940px !default;
+// ###Functions
+
+// Remember don't over-use generic columns. These are here for quick helpers/prototyping or where it makes sense to use
+// something so generic. Keep in mind that we should be able to adjust the values under the mobile and tablet breakpoint
+// to anything without the risk of breaking the mobile layout elsewhere in the site. So if you've used a col-3 for one
+// element, expect that the mobile value can be adjusted everywhere equally.
+// If unsure use a proper named column in _layout
+
+.offset-1 {
+  @include breakpoint($mobile) {
+    @include offset(0);
+  }
+
+  @include breakpoint($tablet) {
+    @include offset(0);
+  }
+
+  @include breakpoint($desktop) {
+    @include offset(1);
+  }
+}
+
+.offset-3 {
+  @include breakpoint($mobile) {
+    @include offset(0);
+  }
+
+  @include breakpoint($tablet) {
+    @include offset(0);
+  }
+
+  @include breakpoint($desktop) {
+    @include offset(3);
+  }
+}
+
+.offset-4 {
+  @include breakpoint($mobile) {
+    @include offset(0);
+  }
+
+  @include breakpoint($tablet) {
+    @include offset(0);
+  }
+
+  @include breakpoint($desktop) {
+    @include offset(4);
+  }
+}
+
+.offset-5 {
+  @include breakpoint($mobile) {
+    @include offset(0);
+  }
+
+  @include breakpoint($tablet) {
+    @include offset(0);
+  }
+
+  @include breakpoint($desktop) {
+    @include offset(5);
+  }
+}
+
+.col-1 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(1);
+  }
+}
+
+.col-2 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(2);
+  }
+}
+
+.col-3 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(3);
+  }
+}
+
+.col-4 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(4);
+  }
+}
+
+.col-5 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(5);
+  }
+}
+
+.col-6 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(6);
+  }
+}
+
+.col-7 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(7);
+  }
+}
+
+.col-8 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(8);
+  }
+}
+
+.col-9 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(9);
+  }
+}
+
+.col-10 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(10);
+  }
+}
+
+.col-11 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(11);
+  }
+}
+
+.col-12 {
+  @include breakpoint($mobile) {
+    @include col(12);
+  }
+
+  @include breakpoint($tablet) {
+    @include col(12);
+  }
+
+  @include breakpoint($desktop) {
+    @include col(12);
+  }
+}

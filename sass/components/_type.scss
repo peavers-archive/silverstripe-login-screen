@@ -1,0 +1,44 @@
+@import 'base';
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+h1 {
+  @include safe-rem(font-size, 38);
+  @include safe-rem(margin, 50 0 20 0);
+  color: $grey-600;
+  font-weight: 400;
+  text-align: center;
+}
+
+h2 {
+  @include safe-rem(font-size, 18);
+  color: $grey-600;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  @include safe-rem(font-size, 13);
+  text-align: center;
+}
+
+a {
+  @include safe-rem(font-size, 14);
+  float: right;
+  color: $blue-500;
+  text-align: right;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.message {
+  @include safe-rem(font-size, 13);
+  color: $red-500;
+  text-align: center;
+}
