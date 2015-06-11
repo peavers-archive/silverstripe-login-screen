@@ -3,3 +3,8 @@ Name: login-screen
 ---
 Security:
   template_main: LoginSplash
+
+SiteConfig:
+  extensions:
+   - LoginScreenSiteConfig
+

@@ -29,16 +29,16 @@
 
 <div class="row">
     <div class="col-12">
-        <h1>Ministry of Education</h1>
+        <h1>$SiteConfig.HeadingOne</h1>
 
-        <h2>Silverstripe CMS Administrator login</h2>
+        <h2>$SiteConfig.HeadingTwo</h2>
     </div>
 </div>
 
 <div class="row">
     <div class="col-12">
         <div class="card">
-            <img src="login-screen/image/moe_logo.png">
+            $SiteConfig.LoginLogo
             $Form
         </div>
     </div>
@@ -46,7 +46,7 @@
 
 <div class="row">
     <div class="col-12">
-        <p>Please make sure you are using Google Chrome and not Internet Explorer</p>
+        <p>$SiteConfig.Message</p>
     </div>
 </div>
 
