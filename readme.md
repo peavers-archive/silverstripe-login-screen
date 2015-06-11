@@ -12,5 +12,7 @@ Ideally composer will be used to install this module.
 ## Screen shots
 
 ### Login screen
-![login-screen-settings](https://github.com/peavers/silverstripe-login-screen/blob/master/image/screens/login-screen-settings.png?raw=true)
+![login-screen](https://github.com/peavers/silverstripe-login-screen/blob/master/image/screens/login-screen.png?raw=true)
 
+### Settings screen
+![login-screen-settings](https://github.com/peavers/silverstripe-login-screen/blob/master/image/screens/login-screen-settings.png?raw=true)
