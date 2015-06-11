@@ -12,7 +12,5 @@ Ideally composer will be used to install this module.
 ## Screen shots
 
 ### Login screen
-![login-screen](https://github.com/peavers/silverstripe-full-calendar/blob/master/images/screens/calendar.png?raw=true 
-"Calendar view")
----------------------------------------
+![login-screen-settings](https://github.com/peavers/silverstripe-login-screen/blob/master/image/screens/login-screen-settings.png?raw=true)
 
